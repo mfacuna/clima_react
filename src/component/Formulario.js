@@ -47,6 +47,7 @@ const Formulario = ({busqueda, guardarBusqueda, guardarConsultar}) => {
                 <select name="pais" id="pais" value={pais} onChange={handleChange}>
                     <option value="">-- Seleccione un país --</option>
                     <option value="US">Estados Unidos</option>
+                    <option value="FR">Francia</option>
                     <option value="CL">Chile</option>
                     <option value="MX">México</option>
                     <option value="AR">Argentina</option>
