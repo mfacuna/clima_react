@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Clima = ({ resultado }) => {
   //Extraer los valores desde resultado
@@ -11,7 +12,7 @@ const Clima = ({ resultado }) => {
   return (
     <div className="card-panel white col s12">
       <div className="black-text">
-        <p class="flow-text">El clima de {name} es:</p>
+        <p className="flow-text">El clima de {name} es:</p>
         <blockquote>
           Temperatura Actual: {parseFloat(main.temp - kelvin, 10).toFixed(2)}
           <span>&#x2103;</span>
@@ -30,5 +31,9 @@ const Clima = ({ resultado }) => {
     </div>
   );
 };
+
+Clima.propTypes = {
+  resultado: PropTypes.object.isRequired 
+}
 
 export default Clima;
